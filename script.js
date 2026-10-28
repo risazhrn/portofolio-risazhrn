@@ -132,6 +132,49 @@
         tags: ["Next.js", "FastAPI", "PostgreSQL", "AI / NLP"],
     },
 
+    
+"proj-olshop": {
+  images: ["assets/olshop2.png"],
+  kicker: "ACADEMIC PROJECT • 2022",
+  title: "Moonstore Online Shop",
+  intro:
+    "A responsive e-commerce website designed to provide a simple, convenient, and user-friendly online shopping experience, featuring a clean interface and intuitive navigation to help users explore online shopping products.",
+
+  sections: [
+    {
+      title: "Key Features",
+      content: `
+        <ul>
+          <li>Responsive website layout for a user-friendly browsing experience.</li>
+          <li>Clean and intuitive user interface design.</li>
+          <li>Product-focused presentation for online shopping.</li>
+          <li>Structured page layouts using HTML and CSS.</li>
+          <li>
+            <strong>Live Website:</strong>
+            <a
+              href="https://moonstore-ecommerce.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Moonstore Online Shop ↗
+            </a>
+          </li>
+        </ul>
+      `,
+    },
+    {
+      title: "Tech Stack",
+      content: `
+        <p>HTML5 and CSS3 for website structure, styling, layout, and responsive design.</p>
+      `,
+    },
+  ],
+
+  tags: ["HTML5", "CSS3", "Responsive Design", "E-Commerce"],
+},
+
+
+
 
     // Education
     "edu-bachelor": {
