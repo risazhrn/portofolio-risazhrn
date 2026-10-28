@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8fafc" />
+  <meta name="description" content="Risa Zahrani — Fullstack Developer & Software Engineer" />
+  <title>Risa Zahrani — Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="page-glow glow-blue"></div>
+  <div class="page-glow glow-pink"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark">r.</span> Risa Zahrani</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#work">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a class="nav-cta" href="#contact">Let's Talk ↗</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow"><span class="status-dot"></span> Open to Opportunities</div>
+        <h1>Hi, I'm Risa.<br>I build software & <span class="highlight-pink">empower future tech talent.</span></h1>
+        <p class="hero-desc">Informatics Engineering graduate and aspiring software engineer passionate about building
+          web applications, exploring new technologies, and sharing knowledge through coding education.</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="#work">View Projects ↓</a>
+          <a class="btn btn-outline" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-backdrop"></div>
+        <div class="portrait">
+          <img src="assets/risa_foto.jpeg" alt="Risa Zahrani"
+            onerror="this.src='https://images.unsplash.com/photo-1534528767235-8c6c7a3a7b8a?auto=format&fit=crop&w=800&q=80'" />
+          <div class="portrait-caption">
+            <div><span class="kicker">PASSIONATE ABOUT</span>
+              <h3>Code & Creativity</h3>
+            </div>
+            <span style="color:var(--accent-pink)">✦</span>
+          </div>
+        </div>
+        <div class="float-note note-1">
+          <div class="note-icon icon-code">&lt;/&gt;</div>
+          <div class="note-content"><strong>Fullstack Development</strong><small>Frontend & Backend</small></div>
+        </div>
+        <div class="float-note note-2">
+          <div class="note-icon icon-teaching">✿</div>
+          <div class="note-content"><strong>Coding Instructor</strong><small>Programming & Creative Learning</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Skills -->
+    <section class="section-wrap" id="about">
+      <span class="kicker">01 / ABOUT ME</span>
+      <div class="about-layout">
+        <div>
+          <h2>Driven by logic.<br>Designed for humans.</h2>
+          <div class="about-text">
+            <p>I'm naturally curious about how things work and enjoy turning ideas into practical solutions through
+              code. I believe growth comes from experimentation, continuous learning, and sharing knowledge. Whether I'm
+              developing an application or teaching students to code, I find fulfillment in solving problems and helping
+              ideas come to life.</p>
+          </div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Languages & Frameworks</h3>
+            <div class="skill-tags">
+              <span>Java</span><span>Python</span><span>JavaScript</span><span>PHP</span><span>Kotlin</span>
+              <span>Spring
+                Boot</span><span>Express.js</span><span>FastAPI</span><span>Laravel</span><span>Angular</span><span>Next.js</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Databases & Developer Tools</h3>
+            <div class="skill-tags">
+              <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span>
+              <span>Git</span><span>GitHub</span><span>Docker</span><span>Postman</span><span>Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section-wrap" id="work">
+      <div class="section-head">
+        <div><span class="kicker">02 / SELECTED WORK</span>
+          <h2>Ideas made real.</h2>
+        </div>
+        <p>A showcase of research concepts, enterprise internships, and digital platforms.</p>
+      </div>
+
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="research">Research</button>
+      </div>
+
+      <div class="project-grid">
+        <button class="project-card" data-category="research" data-modal="proj-feedback">
+          <div class="project-art bg-1">
+            <img src="assets/tumb-proj.png" alt="Omnichannel Feedback Dashboard" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta"><span class="kicker">RESEARCH</span><span class="year-badge">2026</span></div>
+            <h3>Omnichannel Feedback Dashboard</h3>
+            <p>AI-driven sentiment analysis dashboard integrating hotel reviews and surveys.</p>
+            <div class="card-tags"><span>Next.js</span><span>FastAPI</span><span>AI / NLP</span></div>
+          </div>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- Experience (Work & Org) -->
+    <section class="section-wrap" id="experience">
+      <div class="section-head">
+        <div><span class="kicker">03 / EXPERIENCE</span>
+          <h2>Career Journey.</h2>
+        </div>
+      </div>
+
+      <div class="exp-layout">
+        <!-- Work Experience -->
+        <div class="exp-column">
+          <h3 class="col-title">💼 Work Experience</h3>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <div class="timeline-marker"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-card">
+                <span class="date">JAN 2026 — PRESENT</span>
+                <h4>Coding Instructor</h4>
+                <span class="company">PT Ruang Raya Indonesia</span>
+                <ul>
+                  <li>Delivered hybrid coding sessions under the UOB My Digital Space program, teaching Scratch to
+                    elementary students, MIT App Inventor to junior high students, and Python to senior high students.
+                  </li>
+                  <li>Taught programming fundamentals through hands-on activities, fostering logical thinking and
+                    problem-solving while adapting instruction to students’ learning levels.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <div class="timeline-marker"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-card">
+                <span class="date">OCT 2024 — MAR 2025</span>
+                <h4>Technical Writer</h4>
+                <span class="company">Directorate of Information Technology, Telkom University</span>
+                <ul>
+                  <li>Created and maintained structured technical documentation, including user manuals, system change
+                    logs, and meeting notes for multiple applications.</li>
+                  <li>Prepared User Acceptance Testing (UAT) documents and handover reports to support application
+                    testing and acceptance processes.</li>
+                  <li>Documented application requirements and usage guidelines for various user groups, ensuring clarity
+                    and usability.</li>
+                  <li>Organized technical information and created supporting diagrams using draw.io.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <div class="timeline-marker"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-card">
+                <span class="date">JAN 2024 — JUL 2024</span>
+                <h4>IT Developer Intern</h4>
+                <span class="company">Bank BJB Syariah</span>
+                <ul>
+                  <li>Contributed to the development and maintenance of 7 banking applications, building APIs with
+                    Express.js, writing PostgreSQL queries, and implementing application logic.</li>
+                  <li>Fixed bugs across multiple modules, including data reporting, checklists, time retention,
+                    PDF/Excel exports, and application interfaces.</li>
+                  <li>Worked with Express.js, PostgreSQL, and Laravel, gaining hands-on experience in backend
+                    development and maintaining financial applications.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <div class="timeline-marker"></div>
+              </div>
+              <div class="timeline-card">
+                <span class="date">JUL 2023 — JAN 2024</span>
+                <h4>Fullstack Developer Intern</h4>
+                <span class="company">PT Tabel Data Informatika</span>
+                <ul>
+                  <li>Contributed to the development and maintenance of 3 financial management applications, building
+                    user interfaces with Angular and implementing backend functionality using Java and Spring Boot.</li>
+                  <li>Developed and integrated APIs, wrote PostgreSQL queries, and performed bug fixes and application
+                    maintenance.</li>
+                  <li>Conducted API testing using Postman and collaborated with the development team to implement
+                    features and maintain application quality.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Organizational & Academic Experience -->
+        <div class="exp-column">
+          <h3 class="col-title">🤝 Organizational & Academic Experience</h3>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <div class="timeline-marker" style="background:var(--pastel-blue)"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-card">
+                <span class="date">AUG 2025 — JAN 2026</span>
+                <h4>Teaching Assistant</h4>
+                <span class="company">D3 Application Software Engineering, Telkom University</span>
+                <ul>
+                  <li>Guided students through programming exercises and helped troubleshoot coding issues in Algorithm
+                    Implementation, Web Programming II, and Object-Oriented Programming.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <div class="timeline-marker" style="background:var(--pastel-blue)"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-card">
+                <span class="date">SEP 2024 — JUN 2025</span>
+                <h4>Teaching Assistant</h4>
+                <span class="company">D3 Application Software Engineering, Telkom University</span>
+                <ul>
+                  <li>Guided students through programming exercises and helped troubleshoot coding issues in Web
+                    Programming I, Web Programming II, and Object-Oriented Programming.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <div class="timeline-marker" style="background:var(--pastel-blue)"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-card">
+                <span class="date">OCT 2022 — SEP 2023</span>
+                <h4>Android Development Mentor</h4>
+                <span class="company">Chevalier Laboratory SAS, Telkom University</span>
+                <ul>
+                  <li>Mentored junior members in Android application development and coding best practices.</li>
+                  <li>Facilitated learning sessions and supported collaborative technical activities.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker-wrap">
+                <div class="timeline-marker" style="background:var(--pastel-blue)"></div>
+              </div>
+              <div class="timeline-card">
+                <span class="date">MAR 2022 — JAN 2023</span>
+                <h4>Secretary II</h4>
+                <span class="company">HIMADIRA, Telkom University</span>
+                <ul>
+                  <li>Managed organizational administration, documentation, and internal coordination.</li>
+                  <li>Supported communication and administrative activities within the student association.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section-wrap" id="education">
+      <div class="section-head">
+        <div><span class="kicker">04 / EDUCATION</span>
+          <h2>Academic Foundation.</h2>
+        </div>
+      </div>
+      <div class="grid-2">
+        <button class="card" data-modal="edu-bachelor">
+          <div class="edu-icon" style="background:var(--pastel-blue);color:var(--accent-blue)">✦</div>
+          <span class="kicker">2024 — 2026</span>
+          <h3>Bachelor of Informatics Engineering</h3>
+          <p>Telkom University · Cum Laude</p>
+          <div class="gpa"><span>GPA</span><strong>3.80 / 4.00</strong></div>
+        </button>
+        <button class="card" data-modal="edu-diploma">
+          <div class="edu-icon" style="background:var(--pastel-pink);color:var(--accent-pink)">✿</div>
+          <span class="kicker">2021 — 2024</span>
+          <h3>Diploma in Application Software Engineering</h3>
+          <p>Telkom University · Cum Laude</p>
+          <div class="gpa"><span>GPA</span><strong>3.94 / 4.00</strong></div>
+        </button>
+      </div>
+    </section>
+
+
+   
+<!-- Certifications -->
+<section class="section-wrap" id="certs">
+  <div class="section-head">
+    <div>
+      <span class="kicker">05 / CERTIFICATIONS</span>
+      <h2>Continuous Learning.</h2>
+    </div>
+  </div>
+
+  <div class="grid-3">
+
+    <!-- Microsoft Azure AI-900 Preparation -->
+    <button class="card cert-card" data-modal="cert-ai">
+      <div class="cert-preview">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D562DAQHgP9JCcor7gQ/profile-treasury-document-images_1280/B56ZgqT0yiH0AU-/1/1753056498962?e=1793836800&v=beta&t=2_qrpzVGKzsU1kh_AnHP2qyf8O-cRzeJRoVkv2Dc4Ms"
+          alt="Azure AI Fundamentals AI-900 preparation course certificate"
+          loading="lazy"
+        />
+      </div>
+      <div class="cert-meta">
+        <div class="cert-meta-info">
+          <span class="cert-issuer">MICROSOFT AZURE / ELEVAITE</span>
+          <h3>AI Fundamentals (AI-900)</h3>
+          <span class="cert-year">2025</span>
+        </div>
+        <span class="cert-arrow" aria-hidden="true">↗</span>
+      </div>
+    </button>
+
+    <!-- CSS Dasar -->
+    <button class="card cert-card" data-modal="cert-css">
+      <div class="cert-preview">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D562DAQHieDJAI4oilw/profile-treasury-document-images_1280/B56Zd3kXMTHoAc-/1/1750057711961?e=1793836800&v=beta&t=ZBZh3Ydh4Yh2XUqNG9Aj3YAXlgoh9MHuHCK0Drxk1aU"
+          alt="Skilvul CSS Dasar Gold Tier certificate"
+          loading="lazy"
+        />
+      </div>
+      <div class="cert-meta">
+        <div class="cert-meta-info">
+          <span class="cert-issuer">SKILVUL</span>
+          <h3>CSS Dasar (Gold Tier)</h3>
+          <span class="cert-year">2025</span>
+        </div>
+        <span class="cert-arrow" aria-hidden="true">↗</span>
+      </div>
+    </button>
+
+    <!-- JavaScript Dasar -->
+    <button class="card cert-card" data-modal="cert-js">
+      <div class="cert-preview">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D562DAQHNF0H0Ju-lnA/profile-treasury-document-cover-images_1280/B56Zd38oGhHQA0-/0/1750064072787?e=1793750400&v=beta&t=q69Xhwes0N6dUth9UR0V4e81zZjnAvMxcU97h5sIx70"
+          alt="Skilvul JavaScript Dasar Gold Tier certificate"
+          loading="lazy"
+        />
+      </div>
+      <div class="cert-meta">
+        <div class="cert-meta-info">
+          <span class="cert-issuer">SKILVUL</span>
+          <h3>JavaScript Dasar (Gold Tier)</h3>
+          <span class="cert-year">2025</span>
+        </div>
+        <span class="cert-arrow" aria-hidden="true">↗</span>
+      </div>
+    </button>
+
+    <!-- Junior Mobile Programmer -->
+    <button class="card cert-card" data-modal="cert-mobile">
+      <div class="cert-preview">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D562DAQH3fmVzaB2uLQ/profile-treasury-document-cover-images_1280/profile-treasury-document-cover-images_1280/0/1727383567555?e=1793750400&v=beta&t=d-ZPHjyoZyrz23m0bsvB59JkwGLdh7k2WoQ7MxPYmwk"
+          alt="Junior Mobile Programmer certificate from Digital Talent Scholarship"
+          loading="lazy"
+        />
+      </div>
+      <div class="cert-meta">
+        <div class="cert-meta-info">
+          <span class="cert-issuer">KOMINFO / DIGITAL TALENT SCHOLARSHIP</span>
+          <h3>Junior Mobile Programmer</h3>
+          <span class="cert-year">2023</span>
+        </div>
+        <span class="cert-arrow" aria-hidden="true">↗</span>
+      </div>
+    </button>
+
+    <!-- Cybersecurity Essentials -->
+    <button class="card cert-card" data-modal="cert-cyber">
+      <div class="cert-preview">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D562DAQHEA-DYVrwlCw/profile-treasury-document-images_1280/profile-treasury-document-images_1280/1/1727384129771?e=1793836800&v=beta&t=P_EYKEhiCO170JjjbAtv1bkzTwZ7UFSyyVRN47T0tYE"
+          alt="Cisco Networking Academy Cybersecurity Essentials certificate"
+          loading="lazy"
+        />
+      </div>
+      <div class="cert-meta">
+        <div class="cert-meta-info">
+          <span class="cert-issuer">CISCO NETWORKING ACADEMY</span>
+          <h3>Cybersecurity Essentials</h3>
+          <span class="cert-year">2022</span>
+        </div>
+        <span class="cert-arrow" aria-hidden="true">↗</span>
+      </div>
+    </button>
+
+  </div>
+</section>
+
+
+
+    <!-- Contact -->
+    <section class="section-wrap" id="contact">
+      <div class="contact-card">
+        <span class="kicker" style="color:var(--navy)">06 / LET'S CONNECT</span>
+        <h2>Have a good idea?<br>Let's make it happen.</h2>
+        <p>Open to roles in Software Engineering, Fullstack Development, and Technical Education.</p>
+        <div class="btn-group" style="justify-content:center">
+          <a class="btn btn-primary" href="mailto:risazahrani404@gmail.com">Email Me ↗</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/risazhrn/" target="_blank">LinkedIn ↗</a>
+          <a class="btn btn-outline" href="https://github.com/risazhrn" target="_blank">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year"></span> Risa Zahrani.</span>
+    <span>Crafted with pastel magic.</span>
+  </footer>
+
+  <!-- Beautiful Modal -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Lightbox Fullscreen for Zoom -->
+  <div class="image-zoom-lightbox" id="imageZoomLightbox">
+    <img id="zoomedImage" src="" alt="Zoomed view" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
