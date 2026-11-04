@@ -96,7 +96,7 @@
           const card = button.closest('.skill-card');
           const expanded = card.classList.toggle('is-expanded');
           button.setAttribute('aria-expanded', String(expanded));
-          button.innerHTML = expanded ? 'Show less <span aria-hidden="true">+</span>' : 'Show all skills <span aria-hidden="true">+</span>';
+          button.innerHTML = expanded ? 'Show less <span aria-hidden="true">−</span>' : 'View all skills <span aria-hidden="true">+</span>';
         });
       });
 
@@ -198,47 +198,62 @@
           images: [],
           kicker: "COMMUNITY PLATFORM • LIVE WEBSITE",
           title: "Find ur Spark",
-          intro: "A Bandung-based community website where visitors can explore sports and creative activities, discover events, and find registration information.",
+          intro: "A website for browsing sports, creative activities, and community events in Bandung, with event and registration information.",
           sections: [
-            {title: "Project Overview", content: "<p>Find ur Spark brings together people through activities including pickleball, badminton, running, and community meetups.</p>"},
-            {title: "Technology", content: "<p>React 19, TypeScript, Vite 8, Tailwind CSS 4, React Router 7, Supabase, Lucide React, and Vitest.</p>"}
+            {title: "Project Overview", content: "<p>The site lists activities such as pickleball, badminton, and running, along with event details for interested participants.</p>"},
+            {title: "Tech Stack", content: "<p>TypeScript, React, React Router, Tailwind CSS, Supabase, Vite, Lucide React, and Vitest.</p>"}
           ],
-          tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "React Router"],
+          tags: ["TypeScript", "React", "React Router", "Tailwind CSS", "Supabase", "Vite", "Lucide React"],
           liveUrl: "https://www.findurspark.space/"
         },
         "proj-rahmania": {
           images: [],
-          kicker: "NONPROFIT / EDUCATION • LIVE WEBSITE",
+          kicker: "EDUCATION & SOCIAL IMPACT • LIVE WEBSITE",
           title: "Rahmania Foundation",
-          intro: "An informational website for a nonprofit foundation focused on improving access to education and social support for underserved communities.",
+          intro: "An organization website that presents education programs, social activities, event documentation, and contact information.",
           sections: [
-            {title: "Project Overview", content: "<p>The site introduces the foundation's mission, highlights education and social programs, showcases activity documentation, and offers collaboration and contact paths.</p>"},
-            {title: "Technology", content: "<p>Next.js 16, React 19, TypeScript 5, Tailwind CSS 4, Supabase JavaScript and Supabase SSR.</p>"}
+            {title: "Project Overview", content: "<p>The site provides information about the organization's focus, programs, activities, and ways to make contact.</p>"},
+            {title: "Tech Stack", content: "<p>TypeScript, Next.js, React, Tailwind CSS, Supabase, and Supabase SSR.</p>"}
           ],
-          tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase"],
+          tags: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Supabase", "Supabase SSR"],
           liveUrl: "https://www.rahmaniafoundation.or.id/"
         },
         // Certs
-        "cert-ai": { images: ["https://media.licdn.com/dms/image/v2/D562DAQHgP9JCcor7gQ/profile-treasury-document-images_1280/B56ZgqT0yiH0AU-/1/1753056498962?e=1793836800&v=beta&t=2_qrpzVGKzsU1kh_AnHP2qyf8O-cRzeJRoVkv2Dc4Ms"], kicker: "CERTIFICATE • 2025", title: "Azure AI Fundamentals (AI-900)", intro: "Completed online preparation course and certified by ElevAIte Ltd.", tags: ["Microsoft Azure", "AI", "AI-900"] },
-        "cert-js": { images: ["https://media.licdn.com/dms/image/v2/D562DAQHNF0H0Ju-lnA/profile-treasury-document-cover-images_1280/B56Zd38oGhHQA0-/0/1750064072787?e=1793750400&v=beta&t=q69Xhwes0N6dUth9UR0V4e81zZjnAvMxcU97h5sIx70"], kicker: "CERTIFICATION • 2025", title: "JavaScript Dasar (Gold Tier)", intro: "Issued by Skilvul. Comprehensive assessment of core JavaScript concepts and DOM manipulation.", tags: ["Skilvul", "JavaScript"] },
-        "cert-backend": { images: [dummyImg("Backend+Certificate")], kicker: "CERTIFICATION • 2023", title: "Back-End Web Development", intro: "Issued by Dicoding Indonesia. Practical implementation of RESTful APIs and server-side logic.", tags: ["Dicoding", "Backend Dev"] },
-        "cert-mobile": { images: ["https://media.licdn.com/dms/image/v2/D562DAQH3fmVzaB2uLQ/profile-treasury-document-cover-images_1280/profile-treasury-document-cover-images_1280/0/1727383567555?e=1793750400&v=beta&t=d-ZPHjyoZyrz23m0bsvB59JkwGLdh7k2WoQ7MxPYmwk"], kicker: "CERTIFICATION • 2023", title: "Junior Mobile Programmer", intro: "Issued by Digital Talent Scholarship, Kominfo. Practical training in mobile application development.", tags: ["Kominfo", "Mobile Dev"] },
-        "cert-aws": { images: [dummyImg("AWS+Certificate")], kicker: "CERTIFICATION • 2023", title: "AWS Cloud Practitioner Essentials", intro: "Issued by Dicoding Indonesia. Fundamental understanding of AWS Cloud concepts and architecture.", tags: ["AWS", "Cloud"] },
-        "cert-cyber": { images: ["https://media.licdn.com/dms/image/v2/D562DAQHEA-DYVrwlCw/profile-treasury-document-images_1280/profile-treasury-document-images_1280/1/1727384129771?e=1793836800&v=beta&t=P_EYKEhiCO170JjjbAtv1bkzTwZ7UFSyyVRN47T0tYE"], kicker: "CERTIFICATION • 2022", title: "Cybersecurity Essentials", intro: "Issued by Cisco Networking Academy. Foundational knowledge in securing networks and protecting data.", tags: ["Cisco", "Cybersecurity"] }
+        "cert-ai": { images: ["./assets/certificates/azure-ai.jpg"], isCertificate: true, kicker: "COURSE COMPLETION • 2025", title: "Azure AI Fundamentals Preparation (AI-900)", intro: "Completed an Azure AI Fundamentals (AI-900) preparation course with ElevAIte Ltd.", tags: ["Microsoft Azure", "AI", "AI-900"] },
+        "cert-js": { images: ["./assets/certificates/javascript-dasar.jpg"], isCertificate: true, kicker: "CERTIFICATION • 2025", title: "JavaScript Dasar (Gold Tier)", intro: "JavaScript course completion credential from Skilvul.", tags: ["Skilvul", "JavaScript"] },
+        "cert-backend": { images: ["./assets/certificates/backend-dicoding.jpg"], isCertificate: true, kicker: "CERTIFICATION • 2023", title: "Back-End Web Development", intro: "Course covering back-end web development from Dicoding Indonesia.", tags: ["Dicoding", "Backend Dev"] },
+        "cert-mobile": { images: ["./assets/certificates/junior-mobile.jpg"], isCertificate: true, kicker: "CERTIFICATION • 2023", title: "Junior Mobile Programmer", intro: "Mobile programming training through the Digital Talent Scholarship program.", tags: ["Kominfo", "Mobile Dev"] },
+        "cert-aws": { images: ["./assets/certificates/aws-cloud.jpg"], isCertificate: true, kicker: "CERTIFICATION • 2023", title: "AWS Cloud Practitioner Essentials", intro: "Course covering foundational AWS cloud concepts through Dicoding Indonesia.", tags: ["AWS", "Cloud"] },
+        "cert-cyber": { images: ["./assets/certificates/cybersecurity.png"], isCertificate: true, kicker: "CERTIFICATION • 2022", title: "Cybersecurity Essentials", intro: "Course covering cybersecurity fundamentals through Cisco Networking Academy.", tags: ["Cisco", "Cybersecurity"] }
       };
 
       // 5. MODAL & CAROUSEL LOGIC
       const modal = document.getElementById("modalBackdrop");
       const content = document.getElementById("modalContent");
 
+      let lastFocusedElement = null;
+      let closeTimer;
       const openModal = (data) => {
         if (!modal || !content || !data) return;
+        clearTimeout(closeTimer);
+        lastFocusedElement = document.activeElement;
         let sectionsHtml = (data.sections || []).map(sec => `<div class="modal-section"><h3>✦ ${sec.title}</h3>${sec.content}</div>`).join('');
         let tagsHtml = (data.tags || []).map(t => `<span>${t}</span>`).join('');
         
         let images = data.images || [];
         let carouselHtml = '';
-        if (images.length > 0) {
+        if (data.isCertificate) {
+          // Preview file is local. Missing credentials are reported, never replaced with fake certificates.
+          const safePath = images[0] || '';
+          carouselHtml = `<div class="cert-preview" data-preview-container>
+            <img src="${safePath}" class="cert-preview-image modal-carousel-img" alt="Certificate preview: ${data.title}" loading="eager" />
+            <div class="cert-preview-unavailable" hidden>
+              <span class="cert-preview-icon" aria-hidden="true">▧</span>
+              <strong>Certificate preview unavailable</strong>
+              <p>The original image has not been added yet. The certificate details are shown below.</p>
+            </div>
+          </div>`;
+        } else if (images.length > 0) {
           if (images.length === 1) {
             carouselHtml = `<div class="carousel-container"><img src="${images[0]}" alt="${data.title}" class="modal-cover modal-carousel-img" /></div>`;
           } else {
@@ -256,14 +271,29 @@
         }
 
         content.innerHTML = `
+          <div class="modal-topline"><span>${data.isCertificate ? 'CERTIFICATE PREVIEW' : 'PROJECT DETAILS'}</span></div>
           ${carouselHtml}
+          <div class="modal-body-content">
           <span class="kicker">${data.kicker}</span>
-          <h2>${data.title}</h2>
+          <h2 id="modalTitle">${data.title}</h2>
           <p class="intro">${data.intro}</p>
           ${sectionsHtml}
           <div class="modal-tags">${tagsHtml}</div>
-          ${data.liveUrl ? `<a class="modal-live-link" href="${data.liveUrl}" target="_blank" rel="noopener noreferrer">Visit Live Website ↗</a>` : ''}
+          ${data.liveUrl ? `<a class="modal-live-link" href="${data.liveUrl}" target="_blank" rel="noopener noreferrer">View Live Website ↗</a>` : ''}
+          </div>
         `;
+
+        // When the original file is unavailable, show a helpful state rather than a broken image.
+        if (data.isCertificate) {
+          const img = content.querySelector('.cert-preview-image');
+          const fallback = content.querySelector('.cert-preview-unavailable');
+          const showFallback = () => {
+            if (img) img.hidden = true;
+            if (fallback) fallback.hidden = false;
+          };
+          img?.addEventListener('error', showFallback, { once: true });
+          if (img?.complete && img.naturalWidth === 0) showFallback();
+        }
 
         // Carousel Event Handlers
         if (images.length > 1) {
@@ -306,16 +336,19 @@
         }
 
         modal.style.display = "flex";
-        setTimeout(() => modal.classList.add("is-open"), 10);
+        modal.setAttribute('aria-hidden', 'false');
+        requestAnimationFrame(() => modal.classList.add("is-open"));
         document.body.style.overflow = "hidden";
+        document.getElementById('modalClose')?.focus();
       };
 
       const closeModal = () => {
+        if (!modal?.classList.contains('is-open')) return;
         modal.classList.remove("is-open");
-        setTimeout(() => {
-          modal.style.display = "none";
-          document.body.style.overflow = "";
-        }, 300);
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = "";
+        closeTimer = setTimeout(() => { modal.style.display = "none"; }, 220);
+        lastFocusedElement?.focus?.();
       };
 
       document.querySelectorAll("[data-modal]").forEach(btn => {
@@ -333,7 +366,7 @@
       const zoomedImg = document.getElementById("zoomedImage");
 
       document.addEventListener("click", (e) => {
-        if (e.target.classList.contains("modal-carousel-img")) {
+        if (e.target.classList.contains("modal-carousel-img") && e.target.naturalWidth > 0) {
           zoomedImg.src = e.target.src;
           lightbox.classList.add("is-active");
         }
@@ -346,8 +379,17 @@
 
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
-          closeModal();
-          lightbox.classList.remove("is-active");
+          if (lightbox.classList.contains('is-active')) {
+            lightbox.classList.remove("is-active");
+            zoomedImg.src = "";
+          } else closeModal();
+        }
+        if (e.key === 'Tab' && modal.classList.contains('is-open') && !lightbox.classList.contains('is-active')) {
+          const focusable = [...modal.querySelectorAll('button:not([disabled]), a[href], [tabindex="0"]')].filter(el => el.getClientRects().length);
+          if (!focusable.length) return;
+          const first = focusable[0], last = focusable[focusable.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
         }
       });
     });
