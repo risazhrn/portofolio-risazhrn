@@ -4,483 +4,440 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f8fafc" />
+  <meta name="theme-color" content="#f6f8fc" />
   <meta name="description" content="Risa Zahrani — Fullstack Developer & Software Engineer" />
   <title>Risa Zahrani — Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Comfortaa:wght@600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <div class="page-glow glow-blue"></div>
-  <div class="page-glow glow-pink"></div>
 
-  <header class="site-header">
-    <a class="brand" href="#home"><span class="brand-mark">R</span> Risa Zahrani</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#work">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a class="nav-cta" href="#contact">Let's Talk ↗</a>
+  <div class="app-container">
+    
+    <!-- Navigation: left rail on desktop, bottom bar on phones -->
+    <nav class="sidebar" aria-label="Primary navigation">
+      <button class="nav-btn active special-hover" data-target="home" aria-current="page" aria-label="Home">
+        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span class="nav-label">Home</span>
+        <span class="nav-mobile-label" aria-hidden="true">Home</span>
+      </button>
+      <button class="nav-btn special-hover" data-target="about" aria-label="About & Skills">
+        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        <span class="nav-label">About & Skills</span>
+        <span class="nav-mobile-label" aria-hidden="true">About</span>
+      </button>
+      <button class="nav-btn special-hover" data-target="projects" aria-label="Projects">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        <span class="nav-label">Selected Work</span>
+        <span class="nav-mobile-label" aria-hidden="true">Projects</span>
+      </button>
+      <button class="nav-btn special-hover" data-target="experience" aria-label="Experience">
+        <svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        <span class="nav-label">Career Journey</span>
+        <span class="nav-mobile-label" aria-hidden="true">Career</span>
+      </button>
+      <button class="nav-btn special-hover" data-target="education" aria-label="Education & Certs">
+        <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2.12-1.15V17h2V7.4L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72l5 2.73 5-2.73v3.72z"/></svg>
+        <span class="nav-label">Education</span>
+        <span class="nav-mobile-label" aria-hidden="true">Education</span>
+      </button>
     </nav>
-  </header>
 
-  <main class="container">
-
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div>
-        <div class="eyebrow"><span class="status-dot"></span> Open to Opportunities</div>
-        <h1>Hi, I'm Risa.<br>I build software & <span class="highlight-pink">empower future tech talent.</span></h1>
-        <p class="hero-desc">Informatics Engineering graduate and aspiring software engineer passionate about building
-          web applications, exploring new technologies, and sharing knowledge through coding education.</p>
-        <div class="btn-group">
-          <a class="btn btn-primary" href="#work">View Projects ↓</a>
-          <a class="btn btn-outline" href="#contact">Contact Me</a>
-        </div>
+    <!-- 2. FIXED PROFILE CARD (SECOND COLUMN) - Aesthetic Update -->
+    <aside class="profile-sidebar special-hover">
+      <div class="profile-badge">Risa Zahrani 🎀</div>
+      <div class="profile-img-wrap">
+        <img src="assets/risa_foto.jpeg" alt="Risa Zahrani" onerror="this.src='https://placehold.co/400x500/e0f2fe/1e293b?text=Risa+Zahrani'" />
       </div>
-      <div class="hero-visual">
-        <div class="visual-backdrop"></div>
-        <div class="portrait">
-          <img src="assets/risa_foto.jpeg" alt="Risa Zahrani"
-            onerror="this.src='https://images.unsplash.com/photo-1534528767235-8c6c7a3a7b8a?auto=format&fit=crop&w=800&q=80'" />
-          <div class="portrait-caption">
-            <div><span class="kicker">PASSIONATE ABOUT</span>
-              <h3>Code & Creativity</h3>
+      <h2>Risa Zahrani</h2>
+      <span class="profile-role">Fullstack Dev & Educator</span>
+      <p class="bio">Turning complex problems into elegant web applications & inspiring tech learners.</p>
+      
+      <div class="social-links">
+        <a href="https://github.com/risazhrn" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+        <a href="https://www.linkedin.com/in/risazhrn/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+        <a href="mailto:risazahrani404@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+      </div>
+
+      <a href="mailto:risazahrani404@gmail.com" class="btn-download">
+        HIRE ME 💌
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </a>
+    </aside>
+
+    <!-- 3. MAIN CONTENT (RIGHT) -->
+    <main class="main-content" id="mainScroll">
+      
+      <!-- TAB 1: HOME (Fuller & Dynamic) -->
+      <section id="home" class="tab-section active">
+        <div class="home-hero-card special-hover">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            Welcome to My Portfolio
+          </div>
+          <h1 class="section-title">Hi, I'm Risa.<br>I build software & <span class="serif-italic">empower future tech talent.</span> ✨</h1>
+          <p class="hero-desc">Informatics Engineering graduate and aspiring software engineer passionate about building web applications, exploring new technologies, and sharing knowledge through coding education.</p>
+        </div>
+
+        <div class="cta-banner special-hover" role="button" tabindex="0" aria-label="View selected projects" onclick="document.querySelector('[data-target=\'projects\']').click()" style="cursor: pointer;">
+          <div>
+            <span style="font-size: 11px; font-weight: 800; color: var(--accent-pink); letter-spacing: 0.1em; display: block; margin-bottom: 6px;">EXPLORE FURTHER</span>
+            <h2>Check Out My Selected Work 🚀</h2>
+          </div>
+          <div class="cta-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: ABOUT & SKILLS -->
+      <section id="about" class="tab-section">
+        <div class="section-tag"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg> Expertise & Stack</div>
+        <h2 class="section-title">About <span class="serif-italic">Me</span> 🌟</h2>
+        
+        <p style="color:var(--text-muted); line-height: 1.8; margin-bottom: 35px; max-width: 800px; font-size: 15px;">
+          I'm naturally curious about how things work and enjoy turning ideas into practical solutions through code. I believe growth comes from experimentation, continuous learning, and sharing knowledge. Whether I'm developing an application or teaching students to code, I find fulfillment in solving problems and helping ideas come to life.
+        </p>
+
+        <div class="skills-grid" aria-label="Technical skills">
+          <div class="skill-card special-hover">
+            <div class="skill-header">
+              <div class="skill-icon">☕</div>
+              <h3>Backend Engineering</h3>
             </div>
-            <span style="color:var(--accent-pink)">✦</span>
+            <div class="skill-tags-wrap">
+              <span class="skill-tag-item">Java</span>
+              <span class="skill-tag-item">Spring Boot</span>
+              <span class="skill-tag-item">Express.js</span>
+              <span class="skill-tag-item">FastAPI</span>
+              <span class="skill-tag-item">PHP</span>
+              <span class="skill-tag-item">Laravel</span>
+            </div>
+            <button class="skill-expand" type="button" aria-expanded="false">Show all skills <span aria-hidden="true">+</span></button>
           </div>
-        </div>
-        <div class="float-note note-1">
-          <div class="note-icon icon-code">&lt;/&gt;</div>
-          <div class="note-content"><strong>Fullstack Development</strong><small>Frontend & Backend</small></div>
-        </div>
-        <div class="float-note note-2">
-          <div class="note-icon icon-teaching">✿</div>
-          <div class="note-content"><strong>Coding Instructor</strong><small>Programming & Creative Learning</small>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- About & Skills -->
-    <section class="section-wrap" id="about">
-      <span class="kicker">01 / ABOUT ME</span>
-      <div class="about-layout">
-        <div>
-          <h2>Driven by logic.<br>Designed for humans.</h2>
-          <div class="about-text">
-            <p>I'm naturally curious about how things work and enjoy turning ideas into practical solutions through
-              code. I believe growth comes from experimentation, continuous learning, and sharing knowledge. Whether I'm
-              developing an application or teaching students to code, I find fulfillment in solving problems and helping
-              ideas come to life.</p>
+          <div class="skill-card special-hover">
+            <div class="skill-header">
+              <div class="skill-icon">💻</div>
+              <h3>Frontend & Mobile</h3>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="skill-tag-item">JavaScript</span>
+              <span class="skill-tag-item">Angular</span>
+              <span class="skill-tag-item">Next.js</span>
+              <span class="skill-tag-item">Kotlin</span>
+              <span class="skill-tag-item">HTML/CSS</span>
+            </div>
+            <button class="skill-expand" type="button" aria-expanded="false">Show all skills <span aria-hidden="true">+</span></button>
+          </div>
+
+          <div class="skill-card special-hover">
+            <div class="skill-header">
+              <div class="skill-icon">🐘</div>
+              <h3>Databases & Tools</h3>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="skill-tag-item">PostgreSQL</span>
+              <span class="skill-tag-item">MySQL</span>
+              <span class="skill-tag-item">MongoDB</span>
+              <span class="skill-tag-item">Git & GitHub</span>
+              <span class="skill-tag-item">Docker</span>
+              <span class="skill-tag-item">Postman</span>
+            </div>
+            <button class="skill-expand" type="button" aria-expanded="false">Show all skills <span aria-hidden="true">+</span></button>
+          </div>
+
+          <div class="skill-card special-hover">
+            <div class="skill-header">
+              <div class="skill-icon">✿</div>
+              <h3>Digital Literacy & Teaching</h3>
+            </div>
+            <div class="skill-tags-wrap">
+              <span class="skill-tag-item">Python</span>
+              <span class="skill-tag-item">Scratch</span>
+              <span class="skill-tag-item">MIT App Inventor</span>
+              <span class="skill-tag-item">Technical Writing</span>
+              <span class="skill-tag-item">SRS & UAT</span>
+            </div>
+            <button class="skill-expand" type="button" aria-expanded="false">Show all skills <span aria-hidden="true">+</span></button>
           </div>
         </div>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Languages & Frameworks</h3>
-            <div class="skill-tags">
-              <span>Java</span><span>Python</span><span>JavaScript</span><span>PHP</span><span>Kotlin</span>
-              <span>Spring
-                Boot</span><span>Express.js</span><span>FastAPI</span><span>Laravel</span><span>Angular</span><span>Next.js</span>
+      </section>
+
+      <!-- TAB 3: PROJECTS -->
+      <section id="projects" class="tab-section">
+        <div class="section-tag"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg> Selected Work</div>
+        <h2 class="section-title">Ideas made <span class="serif-italic">Real</span> 💫</h2>
+        
+        <p class="selected-work-intro">A selection of live websites built for communities and meaningful social impact.</p>
+
+        <div class="project-filters" aria-label="Filter selected projects">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
+          <button class="filter-btn" data-filter="community" aria-pressed="false">Community</button>
+          <button class="filter-btn" data-filter="nonprofit" aria-pressed="false">Nonprofit</button>
+        </div>
+
+        <div class="rail-controls" data-rail-controls="projectRail">
+          <span class="rail-progress" aria-live="polite">01 / 02</span>
+          <div class="rail-control-buttons">
+            <button class="rail-arrow" type="button" data-dir="prev" aria-label="Previous item">&#8592;</button>
+            <button class="rail-arrow" type="button" data-dir="next" aria-label="Next item">&#8594;</button>
+          </div>
+        </div>
+        <div class="project-grid featured-project-grid compact-rail" id="projectRail" aria-label="Selected projects">
+          <article class="project-card special-hover" data-category="community" data-modal="proj-findurspark" role="button" tabindex="0" aria-label="View Find ur Spark project details">
+            <div class="project-art project-art-custom project-art-spark" aria-hidden="true">
+              <span class="art-eyebrow">COMMUNITY PLATFORM</span>
+              <div class="art-symbol">✳</div>
+              <strong>find ur <em>spark.</em></strong>
+              <span class="art-footnote">Find your spark, find yourself.</span>
+            </div>
+            <div class="project-meta"><span>COMMUNITY · WEB APP</span><span class="year">LIVE</span></div>
+            <h3>Find ur Spark</h3>
+            <p>A community website for discovering sports, creative activities, and social events in Bandung, with event information and registration experiences.</p>
+            <div class="card-tags"><span>React 19</span><span>TypeScript</span><span>Vite 8</span><span>Tailwind CSS 4</span><span>Supabase</span></div>
+            <a class="project-live-link" href="https://www.findurspark.space/" target="_blank" rel="noopener noreferrer" aria-label="Visit Find ur Spark live website">Visit Live Website <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="project-card special-hover" data-category="nonprofit" data-modal="proj-rahmania" role="button" tabindex="0" aria-label="View Rahmania Foundation project details">
+            <div class="project-art project-art-custom project-art-rahmania" aria-hidden="true">
+              <span class="art-eyebrow">NONPROFIT WEBSITE</span>
+              <div class="art-symbol">✦</div>
+              <strong>Rahmania <em>Foundation</em></strong>
+              <span class="art-footnote">Mengubah hidup dengan pendidikan.</span>
+            </div>
+            <div class="project-meta"><span>NONPROFIT · EDUCATION</span><span class="year">LIVE</span></div>
+            <h3>Rahmania Foundation</h3>
+            <p>A nonprofit organization website showcasing education initiatives, community programs, activity documentation, and opportunities for collaboration.</p>
+            <div class="card-tags"><span>Next.js 16</span><span>React 19</span><span>TypeScript</span><span>Tailwind CSS 4</span><span>Supabase</span></div>
+            <a class="project-live-link" href="https://www.rahmaniafoundation.or.id/" target="_blank" rel="noopener noreferrer" aria-label="Visit Rahmania Foundation live website">Visit Live Website <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+
+      <!-- TAB 4: EXPERIENCE -->
+      <section id="experience" class="tab-section">
+        <div class="section-tag"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg> Career Journey</div>
+        <h2 class="section-title">Where I've <span class="serif-italic">Grown</span> 🎀</h2>
+
+        <div class="career-switch" role="tablist" aria-label="Experience category">
+          <button type="button" class="career-tab is-selected" role="tab" aria-selected="true" data-career="work">Work Experience</button>
+          <button type="button" class="career-tab" role="tab" aria-selected="false" data-career="organization">Organization</button>
+        </div>
+        <div class="career-mobile-controls" aria-label="Experience navigation">
+          <span class="career-progress" aria-live="polite">01 / 04</span>
+          <div class="rail-control-buttons">
+            <button class="rail-arrow career-prev" type="button" aria-label="Previous experience">&#8592;</button>
+            <button class="rail-arrow career-next" type="button" aria-label="Next experience">&#8594;</button>
+          </div>
+        </div>
+
+        <div class="exp-layout">
+          <!-- Work Experience -->
+          <div class="exp-column">
+            <h3 class="col-title">💼 Work Experience</h3>
+            <div class="timeline">
+              
+              <article class="exp-timeline-item">
+                <div class="exp-timeline-node"></div>
+                <div class="exp-timeline-card">
+                  <span class="date">JAN 2026 — PRESENT</span>
+                  <h4>Coding Instructor</h4>
+                  <span class="company">PT Ruang Raya Indonesia</span>
+                  <ul>
+                    <li>Delivered hybrid coding sessions under the UOB My Digital Space program, teaching Scratch to elementary students, MIT App Inventor to junior high students, and Python to senior high students.</li>
+                    <li>Taught programming fundamentals through hands-on activities, fostering logical thinking and problem-solving while adapting instruction to students’ learning levels.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="exp-timeline-item">
+                <div class="exp-timeline-node"></div>
+                <div class="exp-timeline-card">
+                  <span class="date">OCT 2024 — MAR 2025</span>
+                  <h4>Technical Writer</h4>
+                  <span class="company">Directorate of Information Technology, Telkom University</span>
+                  <ul>
+                    <li>Created and maintained structured technical documentation, including user manuals, system change logs, and meeting notes for multiple applications.</li>
+                    <li>Prepared User Acceptance Testing (UAT) documents and handover reports to support application testing and acceptance processes.</li>
+                    <li>Documented application requirements and usage guidelines for various user groups, ensuring clarity and usability.</li>
+                    <li>Organized technical information and created supporting diagrams using draw.io.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="exp-timeline-item">
+                <div class="exp-timeline-node"></div>
+                <div class="exp-timeline-card">
+                  <span class="date">JAN 2024 — JUL 2024</span>
+                  <h4>IT Developer Intern</h4>
+                  <span class="company">Bank BJB Syariah</span>
+                  <ul>
+                    <li>Contributed to the development and maintenance of 7 banking applications, building APIs with Express.js, writing PostgreSQL queries, and implementing application logic.</li>
+                    <li>Fixed bugs across multiple modules, including data reporting, checklists, time retention, PDF/Excel exports, and application interfaces.</li>
+                    <li>Worked with Express.js, PostgreSQL, and Laravel, gaining hands-on experience in backend development and maintaining financial applications.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="exp-timeline-item">
+                <div class="exp-timeline-node"></div>
+                <div class="exp-timeline-card">
+                  <span class="date">JUL 2023 — JAN 2024</span>
+                  <h4>Fullstack Developer Intern</h4>
+                  <span class="company">PT Tabel Data Informatika</span>
+                  <ul>
+                    <li>Contributed to the development and maintenance of 3 financial management applications, building user interfaces with Angular and implementing backend functionality using Java and Spring Boot.</li>
+                    <li>Developed and integrated APIs, wrote PostgreSQL queries, and performed bug fixes and application maintenance.</li>
+                    <li>Conducted API testing using Postman and collaborated with the development team to implement features and maintain application quality.</li>
+                  </ul>
+                </div>
+              </article>
+
             </div>
           </div>
-          <div class="skill-category">
-            <h3>Databases & Developer Tools</h3>
-            <div class="skill-tags">
-              <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span>
-              <span>Git</span><span>GitHub</span><span>Docker</span><span>Postman</span><span>Figma</span>
+
+          <!-- Organizational & Academic Experience -->
+          <div class="exp-column">
+            <h3 class="col-title">🤝 Organizational & Academic Experience</h3>
+            <div class="timeline">
+              
+              <article class="exp-timeline-item">
+                <div class="exp-timeline-node"></div>
+                <div class="exp-timeline-card">
+                  <span class="date">AUG 2025 — JAN 2026</span>
+                  <h4>Teaching Assistant</h4>
+                  <span class="company">D3 Application Software Engineering, Telkom University</span>
+                  <ul>
+                    <li>Guided students through programming exercises and helped troubleshoot coding issues in Algorithm Implementation, Web Programming II, and Object-Oriented Programming.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="exp-timeline-item">
+                <div class="exp-timeline-node"></div>
+                <div class="exp-timeline-card">
+                  <span class="date">SEP 2024 — JUN 2025</span>
+                  <h4>Teaching Assistant</h4>
+                  <span class="company">D3 Application Software Engineering, Telkom University</span>
+                  <ul>
+                    <li>Guided students through programming exercises and helped troubleshoot coding issues in Web Programming I, Web Programming II, and Object-Oriented Programming.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="exp-timeline-item">
+                <div class="exp-timeline-node"></div>
+                <div class="exp-timeline-card">
+                  <span class="date">OCT 2022 — SEP 2023</span>
+                  <h4>Android Development Mentor</h4>
+                  <span class="company">Chevalier Laboratory SAS, Telkom University</span>
+                  <ul>
+                    <li>Mentored junior members in Android application development and coding best practices.</li>
+                    <li>Facilitated learning sessions and supported collaborative technical activities.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="exp-timeline-item">
+                <div class="exp-timeline-node"></div>
+                <div class="exp-timeline-card">
+                  <span class="date">MAR 2022 — JAN 2023</span>
+                  <h4>Secretary II</h4>
+                  <span class="company">HIMADIRA, Telkom University</span>
+                  <ul>
+                    <li>Managed organizational administration, documentation, and internal coordination.</li>
+                    <li>Supported communication and administrative activities within the student association.</li>
+                  </ul>
+                </div>
+              </article>
+
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      
+      <!-- TAB 5: EDUCATION & CERTS -->
+      <section id="education" class="tab-section">
+        <div class="section-tag"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg> Academic Base</div>
+        <h2 class="section-title">Always in <span class="serif-italic">Learning Mode</span> 🎓</h2>
 
-    <!-- Projects -->
-    <section class="section-wrap" id="work">
-      <div class="section-head">
-        <div><span class="kicker">02 / SELECTED WORK</span>
-          <h2>Ideas made real.</h2>
-        </div>
-        <p>A showcase of research concepts, enterprise internships, and digital platforms.</p>
-      </div>
-
-      <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="research">Research</button>
-        <button class="filter-btn" data-filter="academic">Academic</button>
-      </div>
-
-      <div class="project-grid">
-        <button class="project-card" data-category="research" data-modal="proj-feedback">
-          <div class="project-art bg-1">
-            <img src="assets/tumb-proj.png" alt="Omnichannel Feedback Dashboard" loading="lazy" />
+        <div class="edu-grid">
+          <div class="edu-card">
+            <span class="edu-badge-year">2024 — 2026</span>
+            <h3>Bachelor in Informatics Engineering</h3>
+            <span class="edu-school">Telkom University</span>
+            <p class="edu-desc">GPA 3.80 / 4.00 · Cum Laude. Focused on artificial intelligence, cloud computing, and advanced software engineering.</p>
           </div>
-          <div class="project-info">
-            <div class="project-meta"><span class="kicker">RESEARCH</span><span class="year-badge">2026</span></div>
-            <h3>Omnichannel Feedback Dashboard</h3>
-            <p>AI-driven sentiment analysis dashboard integrating hotel reviews and surveys.</p>
-            <div class="card-tags"><span>Next.js</span><span>FastAPI</span><span>AI / NLP</span></div>
-          </div>
-        </button>
 
-        <button class="project-card" data-category="academic" data-modal="proj-olshop">
-          <div class="project-art bg-1">
-            <img src="assets/olshop.png" alt="Omnichannel Feedback Dashboard" loading="lazy" />
-          </div>
-          <div class="project-info">
-            <div class="project-meta"><span class="kicker">ACADEMIC PROJECT</span><span class="year-badge">2022</span></div>
-            <h3>Moonstore Online Shop</h3>
-            <p>a responsive e-commerce website designed to provide a simple, convenient, and user-friendly online shopping experience.</p>
-            <div class="card-tags"><span>HTML</span><span>CSS</span></div>
-          </div>
-        </button>
-      </div>
-
-    </section>
-
-    <!-- Experience (Work & Org) -->
-    <section class="section-wrap" id="experience">
-      <div class="section-head">
-        <div><span class="kicker">03 / EXPERIENCE</span>
-          <h2>Career Journey.</h2>
-        </div>
-      </div>
-
-      <div class="exp-layout">
-        <!-- Work Experience -->
-        <div class="exp-column">
-          <h3 class="col-title">💼 Work Experience</h3>
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-marker-wrap">
-                <div class="timeline-marker"></div>
-                <div class="timeline-line"></div>
-              </div>
-              <div class="timeline-card">
-                <span class="date">JAN 2026 — PRESENT</span>
-                <h4>Coding Instructor</h4>
-                <span class="company">PT Ruang Raya Indonesia</span>
-                <ul>
-                  <li>Delivered hybrid coding sessions under the UOB My Digital Space program, teaching Scratch to
-                    elementary students, MIT App Inventor to junior high students, and Python to senior high students.
-                  </li>
-                  <li>Taught programming fundamentals through hands-on activities, fostering logical thinking and
-                    problem-solving while adapting instruction to students’ learning levels.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-marker-wrap">
-                <div class="timeline-marker"></div>
-                <div class="timeline-line"></div>
-              </div>
-              <div class="timeline-card">
-                <span class="date">OCT 2024 — MAR 2025</span>
-                <h4>Technical Writer</h4>
-                <span class="company">Directorate of Information Technology, Telkom University</span>
-                <ul>
-                  <li>Created and maintained structured technical documentation, including user manuals, system change
-                    logs, and meeting notes for multiple applications.</li>
-                  <li>Prepared User Acceptance Testing (UAT) documents and handover reports to support application
-                    testing and acceptance processes.</li>
-                  <li>Documented application requirements and usage guidelines for various user groups, ensuring clarity
-                    and usability.</li>
-                  <li>Organized technical information and created supporting diagrams using draw.io.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-marker-wrap">
-                <div class="timeline-marker"></div>
-                <div class="timeline-line"></div>
-              </div>
-              <div class="timeline-card">
-                <span class="date">JAN 2024 — JUL 2024</span>
-                <h4>IT Developer Intern</h4>
-                <span class="company">Bank BJB Syariah</span>
-                <ul>
-                  <li>Contributed to the development and maintenance of 7 banking applications, building APIs with
-                    Express.js, writing PostgreSQL queries, and implementing application logic.</li>
-                  <li>Fixed bugs across multiple modules, including data reporting, checklists, time retention,
-                    PDF/Excel exports, and application interfaces.</li>
-                  <li>Worked with Express.js, PostgreSQL, and Laravel, gaining hands-on experience in backend
-                    development and maintaining financial applications.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-marker-wrap">
-                <div class="timeline-marker"></div>
-              </div>
-              <div class="timeline-card">
-                <span class="date">JUL 2023 — JAN 2024</span>
-                <h4>Fullstack Developer Intern</h4>
-                <span class="company">PT Tabel Data Informatika</span>
-                <ul>
-                  <li>Contributed to the development and maintenance of 3 financial management applications, building
-                    user interfaces with Angular and implementing backend functionality using Java and Spring Boot.</li>
-                  <li>Developed and integrated APIs, wrote PostgreSQL queries, and performed bug fixes and application
-                    maintenance.</li>
-                  <li>Conducted API testing using Postman and collaborated with the development team to implement
-                    features and maintain application quality.</li>
-                </ul>
-              </div>
-            </article>
+          <div class="edu-card" style="background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);">
+            <span class="edu-badge-year" style="background: var(--pastel-blue); color: var(--accent-blue); border-color: #bae6fd;">2021 — 2024</span>
+            <h3>Diploma in Application Software Eng.</h3>
+            <span class="edu-school" style="color: var(--accent-pink);">Telkom University</span>
+            <p class="edu-desc">GPA 3.94 / 4.00 · Cum Laude. Built a robust foundation in web & mobile programming, database design, and agile workflows.</p>
           </div>
         </div>
 
-        <!-- Organizational & Academic Experience -->
-        <div class="exp-column">
-          <h3 class="col-title">🤝 Organizational & Academic Experience</h3>
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-marker-wrap">
-                <div class="timeline-marker" style="background:var(--pastel-blue)"></div>
-                <div class="timeline-line"></div>
-              </div>
-              <div class="timeline-card">
-                <span class="date">AUG 2025 — JAN 2026</span>
-                <h4>Teaching Assistant</h4>
-                <span class="company">D3 Application Software Engineering, Telkom University</span>
-                <ul>
-                  <li>Guided students through programming exercises and helped troubleshoot coding issues in Algorithm
-                    Implementation, Web Programming II, and Object-Oriented Programming.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-marker-wrap">
-                <div class="timeline-marker" style="background:var(--pastel-blue)"></div>
-                <div class="timeline-line"></div>
-              </div>
-              <div class="timeline-card">
-                <span class="date">SEP 2024 — JUN 2025</span>
-                <h4>Teaching Assistant</h4>
-                <span class="company">D3 Application Software Engineering, Telkom University</span>
-                <ul>
-                  <li>Guided students through programming exercises and helped troubleshoot coding issues in Web
-                    Programming I, Web Programming II, and Object-Oriented Programming.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-marker-wrap">
-                <div class="timeline-marker" style="background:var(--pastel-blue)"></div>
-                <div class="timeline-line"></div>
-              </div>
-              <div class="timeline-card">
-                <span class="date">OCT 2022 — SEP 2023</span>
-                <h4>Android Development Mentor</h4>
-                <span class="company">Chevalier Laboratory SAS, Telkom University</span>
-                <ul>
-                  <li>Mentored junior members in Android application development and coding best practices.</li>
-                  <li>Facilitated learning sessions and supported collaborative technical activities.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-marker-wrap">
-                <div class="timeline-marker" style="background:var(--pastel-blue)"></div>
-              </div>
-              <div class="timeline-card">
-                <span class="date">MAR 2022 — JAN 2023</span>
-                <h4>Secretary II</h4>
-                <span class="company">HIMADIRA, Telkom University</span>
-                <ul>
-                  <li>Managed organizational administration, documentation, and internal coordination.</li>
-                  <li>Supported communication and administrative activities within the student association.</li>
-                </ul>
-              </div>
-            </article>
+        <div class="cert-heading-row"><h3>CERTIFICATIONS <span>(Tap to view preview)</span></h3></div>
+        <div class="rail-controls" data-rail-controls="certRail">
+          <span class="rail-progress" aria-live="polite">01 / 06</span>
+          <div class="rail-control-buttons">
+            <button class="rail-arrow" type="button" data-dir="prev" aria-label="Previous item">&#8592;</button>
+            <button class="rail-arrow" type="button" data-dir="next" aria-label="Next item">&#8594;</button>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="section-wrap" id="education">
-      <div class="section-head">
-        <div><span class="kicker">04 / EDUCATION</span>
-          <h2>Academic Foundation.</h2>
+        <div class="project-grid compact-rail cert-rail" id="certRail" aria-label="Certifications">
+           <div class="project-card special-hover" data-modal="cert-ai" role="button" tabindex="0">
+             <div class="project-meta"><span>MICROSOFT</span></div>
+             <h3>Azure AI Fundamentals</h3>
+             <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">ElevAIte Ltd. (2025)</p>
+           </div>
+           <div class="project-card special-hover" data-modal="cert-js" role="button" tabindex="0">
+             <div class="project-meta"><span>SKILVUL</span></div>
+             <h3>JavaScript Dasar (Gold)</h3>
+             <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">Skilvul (2025)</p>
+           </div>
+           <div class="project-card special-hover" data-modal="cert-backend" role="button" tabindex="0">
+             <div class="project-meta"><span>DICODING</span></div>
+             <h3>Back-End Web Development</h3>
+             <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">Dicoding Indonesia (2023)</p>
+           </div>
+           <div class="project-card special-hover" data-modal="cert-mobile" role="button" tabindex="0">
+             <div class="project-meta"><span>KOMINFO</span></div>
+             <h3>Junior Mobile Programmer</h3>
+             <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">Digital Talent Scholarship (2023)</p>
+           </div>
+           <div class="project-card special-hover" data-modal="cert-aws" role="button" tabindex="0">
+             <div class="project-meta"><span>DICODING</span></div>
+             <h3>AWS Cloud Practitioner</h3>
+             <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">Dicoding Indonesia (2023)</p>
+           </div>
+           <div class="project-card special-hover" data-modal="cert-cyber" role="button" tabindex="0">
+             <div class="project-meta"><span>CISCO</span></div>
+             <h3>Cybersecurity Essentials</h3>
+             <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">Cisco Networking Academy (2022)</p>
+           </div>
         </div>
-      </div>
-      <div class="grid-2">
-        <button class="card" data-modal="edu-bachelor">
-          <div class="edu-icon" style="background:var(--pastel-blue);color:var(--accent-blue)">✦</div>
-          <span class="kicker">2024 — 2026</span>
-          <h3>Bachelor of Informatics Engineering</h3>
-          <p>Telkom University · Cum Laude</p>
-          <div class="gpa"><span>GPA</span><strong>3.80 / 4.00</strong></div>
-        </button>
-        <button class="card" data-modal="edu-diploma">
-          <div class="edu-icon" style="background:var(--pastel-pink);color:var(--accent-pink)">✿</div>
-          <span class="kicker">2021 — 2024</span>
-          <h3>Diploma in Application Software Engineering</h3>
-          <p>Telkom University · Cum Laude</p>
-          <div class="gpa"><span>GPA</span><strong>3.94 / 4.00</strong></div>
-        </button>
-      </div>
-    </section>
+      </section>
 
-
-   
-<!-- Certifications -->
-<section class="section-wrap" id="certs">
-  <div class="section-head">
-    <div>
-      <span class="kicker">05 / CERTIFICATIONS</span>
-      <h2>Continuous Learning.</h2>
-    </div>
+    </main>
   </div>
 
-  <div class="grid-3">
-
-    <!-- Microsoft Azure AI-900 Preparation -->
-    <button class="card cert-card" data-modal="cert-ai">
-      <div class="cert-preview">
-        <img
-          src="https://media.licdn.com/dms/image/v2/D562DAQHgP9JCcor7gQ/profile-treasury-document-images_1280/B56ZgqT0yiH0AU-/1/1753056498962?e=1793836800&v=beta&t=2_qrpzVGKzsU1kh_AnHP2qyf8O-cRzeJRoVkv2Dc4Ms"
-          alt="Azure AI Fundamentals AI-900 preparation course certificate"
-          loading="lazy"
-        />
-      </div>
-      <div class="cert-meta">
-        <div class="cert-meta-info">
-          <span class="cert-issuer">MICROSOFT AZURE / ELEVAITE</span>
-          <h3>AI Fundamentals (AI-900)</h3>
-          <span class="cert-year">2025</span>
-        </div>
-        <span class="cert-arrow" aria-hidden="true">↗</span>
-      </div>
-    </button>
-
-    <!-- CSS Dasar -->
-    <button class="card cert-card" data-modal="cert-css">
-      <div class="cert-preview">
-        <img
-          src="https://media.licdn.com/dms/image/v2/D562DAQHieDJAI4oilw/profile-treasury-document-images_1280/B56Zd3kXMTHoAc-/1/1750057711961?e=1793836800&v=beta&t=ZBZh3Ydh4Yh2XUqNG9Aj3YAXlgoh9MHuHCK0Drxk1aU"
-          alt="Skilvul CSS Dasar Gold Tier certificate"
-          loading="lazy"
-        />
-      </div>
-      <div class="cert-meta">
-        <div class="cert-meta-info">
-          <span class="cert-issuer">SKILVUL</span>
-          <h3>CSS Dasar (Gold Tier)</h3>
-          <span class="cert-year">2025</span>
-        </div>
-        <span class="cert-arrow" aria-hidden="true">↗</span>
-      </div>
-    </button>
-
-    <!-- JavaScript Dasar -->
-    <button class="card cert-card" data-modal="cert-js">
-      <div class="cert-preview">
-        <img
-          src="https://media.licdn.com/dms/image/v2/D562DAQHNF0H0Ju-lnA/profile-treasury-document-cover-images_1280/B56Zd38oGhHQA0-/0/1750064072787?e=1793750400&v=beta&t=q69Xhwes0N6dUth9UR0V4e81zZjnAvMxcU97h5sIx70"
-          alt="Skilvul JavaScript Dasar Gold Tier certificate"
-          loading="lazy"
-        />
-      </div>
-      <div class="cert-meta">
-        <div class="cert-meta-info">
-          <span class="cert-issuer">SKILVUL</span>
-          <h3>JavaScript Dasar (Gold Tier)</h3>
-          <span class="cert-year">2025</span>
-        </div>
-        <span class="cert-arrow" aria-hidden="true">↗</span>
-      </div>
-    </button>
-
-    <!-- Junior Mobile Programmer -->
-    <button class="card cert-card" data-modal="cert-mobile">
-      <div class="cert-preview">
-        <img
-          src="https://media.licdn.com/dms/image/v2/D562DAQH3fmVzaB2uLQ/profile-treasury-document-cover-images_1280/profile-treasury-document-cover-images_1280/0/1727383567555?e=1793750400&v=beta&t=d-ZPHjyoZyrz23m0bsvB59JkwGLdh7k2WoQ7MxPYmwk"
-          alt="Junior Mobile Programmer certificate from Digital Talent Scholarship"
-          loading="lazy"
-        />
-      </div>
-      <div class="cert-meta">
-        <div class="cert-meta-info">
-          <span class="cert-issuer">KOMINFO / DIGITAL TALENT SCHOLARSHIP</span>
-          <h3>Junior Mobile Programmer</h3>
-          <span class="cert-year">2023</span>
-        </div>
-        <span class="cert-arrow" aria-hidden="true">↗</span>
-      </div>
-    </button>
-
-    <!-- Cybersecurity Essentials -->
-    <button class="card cert-card" data-modal="cert-cyber">
-      <div class="cert-preview">
-        <img
-          src="https://media.licdn.com/dms/image/v2/D562DAQHEA-DYVrwlCw/profile-treasury-document-images_1280/profile-treasury-document-images_1280/1/1727384129771?e=1793836800&v=beta&t=P_EYKEhiCO170JjjbAtv1bkzTwZ7UFSyyVRN47T0tYE"
-          alt="Cisco Networking Academy Cybersecurity Essentials certificate"
-          loading="lazy"
-        />
-      </div>
-      <div class="cert-meta">
-        <div class="cert-meta-info">
-          <span class="cert-issuer">CISCO NETWORKING ACADEMY</span>
-          <h3>Cybersecurity Essentials</h3>
-          <span class="cert-year">2022</span>
-        </div>
-        <span class="cert-arrow" aria-hidden="true">↗</span>
-      </div>
-    </button>
-
-  </div>
-</section>
-
-
-
-    <!-- Contact -->
-    <section class="section-wrap" id="contact">
-      <div class="contact-card">
-        <span class="kicker" style="color:var(--navy)">06 / LET'S CONNECT</span>
-        <h2>Have a good idea?<br>Let's make it happen.</h2>
-        <p>Open to roles in Software Engineering, Fullstack Development, and Technical Education.</p>
-        <div class="btn-group" style="justify-content:center">
-          <a class="btn btn-primary" href="mailto:risazahrani404@gmail.com">Email Me ↗</a>
-          <a class="btn btn-outline" href="https://www.linkedin.com/in/risazhrn/" target="_blank">LinkedIn ↗</a>
-          <a class="btn btn-outline" href="https://github.com/risazhrn" target="_blank">GitHub ↗</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="container footer">
-    <span>© <span id="year"></span> Risa Zahrani.</span>
-    <span>Personal Portofolio</span>
-  </footer>
-
-  <!-- Beautiful Modal -->
+  <!-- MODAL BACKDROP -->
   <div class="modal-backdrop" id="modalBackdrop">
     <div class="modal">
-      <button class="modal-close" id="modalClose">×</button>
+      <button class="modal-close" id="modalClose" aria-label="Close modal">×</button>
       <div id="modalContent"></div>
     </div>
   </div>
 
-  <!-- Lightbox Fullscreen for Zoom -->
+  <!-- LIGHTBOX FOR ZOOM -->
   <div class="image-zoom-lightbox" id="imageZoomLightbox">
     <img id="zoomedImage" src="" alt="Zoomed view" />
   </div>
